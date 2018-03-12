@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <!-- googleapis 外嵌字體 -->
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
+
+  <title> css-transform-icon | BulbCat</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 16px;
+    }
+
+    /* 播放iocn */
+
+    .a {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #363;
+      transition: .2s;
+      cursor: pointer;
+    }
+
+    /* 暫停符號 */
+
+    .a:before,
+    .a:after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 0;
+      top: 40px;
+      border-style: solid;
+      border-width: 0 0 24px 0;
+      transform: scale(0.5, 2);
+    }
+
+    .a:before {
+      left: 27px;
+      border-color: #fff rgba(255, 255, 255, 0);
+      transition: .2s;
+    }
+
+    .a:after {
+      left: 54px;
+      border-color: #fff rgba(255, 255, 255, 0);
+      transition: .2s;
+    }
+
+    /* 開始符號 */
+
+    .a:hover:before {
+      top: 27px;
+      left: 45px;
+      width: 0;
+      transform: scale(2, 1.17) rotate(90deg);
+      border-width: 0 0 24px 24px;
+    }
+
+    .a:hover:after {
+      top: 54px;
+      left: 45px;
+      width: 0;
+      transform: scale(2, 1.17) rotate(90deg);
+      border-width: 0 24px 24px 0;
+    }
+
+    .a:hover {
+      background: #095;
+      transition: .2s;
+    }
+
+    /* 方形符號 */
+
+    /* .a:active:before {
+      border-width: 0 0 24px 0;
+      width: 22px;
+      top: 26px;
+      left: 38px;
+      transition: .4s;
+    }
+
+    .a:active:after {
+      border-width: 0 0 24px 0;
+      width: 22px;
+      top: 50px;
+      left: 38px;
+      transition: .4s;
+    }
+
+    .a:active {
+      transform: rotate(90deg);
+      background: #0a9;
+    } */
+
+    /* 列表icon */
+
+    .b {
+      position: absolute;
+      top: 50px;
+      left: 160px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #09c;
+      transition: .2s;
+    }
+
+    /* 列表符號 */
+
+    .b i {
+      position: absolute;
+      display: block;
+      width: 56px;
+      /* 長短 */
+      height: 10px;
+      /* 厚度 */
+      background: #fff;
+      left: 22px;
+      border-radius: 4px;
+      transition: .2s;
+    }
+
+    .b1 {
+      top: 24px;
+    }
+
+    .b2 {
+      top: 44px;
+    }
+
+    .b3 {
+      top: 64px;
+    }
+
+    /* 禁止符號 */
+
+    /* .b:hover .b1 {
+      left: 15px;
+      width: 70px;
+      transform: translateY(20px) rotate(45deg);
+    }
+
+    .b:hover .b3 {
+      left: 15px;
+      width: 70px;
+      transform: translateY(-20px) rotate(-45deg);
+    }
+
+    .b:hover .b2 {
+      left: 50px;
+      width: 0;
+    }
+
+    .b:hover {
+      background: #c00;
+    } */
+
+    /* 箭頭符號 */
+
+    .b:hover .b1 {
+      width: 40px;
+      transform: translateY(11px) rotate(-45deg);
+      transition: .3s;
+    }
+
+    .b:hover .b3 {
+      width: 40px;
+      transform: translateY(-7px) rotate(45deg);
+      transition: .3s;
+    }
+
+    .b:hover .b2 {
+      top: 46px;
+      left: 28px;
+      width: 50px;
+      transition: .3s;
+
+    }
+
+    .b:hover {
+      transform: rotate(-90deg);
+      background: #f70;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="a"></div>
+  <div class="b">
+    <i class="b1"></i>
+    <i class="b2"></i>
+    <i class="b3"></i>
+  </div>
+
+  <!-- Optional JavaScript -->
+
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
