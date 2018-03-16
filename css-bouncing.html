@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <!-- googleapis 外嵌字體 -->
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title> css-bouncing | BulbCat</title>
+  <style>
+    .box {
+      position: relative;
+    }
+
+    /* 旋轉的正方形 */
+
+    .box:before {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      top: 60px;
+      left: 50px;
+      width: 50px;
+      height: 50px;
+      background: #0c0;
+      border-radius: 2px;
+      transform: rotate(45deg);
+      animation: box .8s linear infinite;
+    }
+
+    @keyframes box {
+      0% {
+        top: 50px;
+        transform: rotate(0deg);
+      }
+      20% {
+        border-radius: 2px;
+      }
+      50% {
+        top: 80px;
+        border-bottom-right-radius: 25px;
+        transform: rotate(45deg);
+      }
+      80% {
+        border-radius: 2px;
+      }
+      100% {
+        top: 50px;
+        transform: rotate(90deg);
+      }
+    }
+
+    /* 正方形陰影 */
+
+    .box:after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 128px;
+      left: 52px;
+      width: 44px;
+      height: 3px;
+      background: #eaeaea;
+      border-radius: 100%;
+      animation: shadow .8s linear infinite;
+    }
+
+    @keyframes shadow {
+      0%,
+      100% {
+        left: 54px;
+        width: 40px;
+        background: #eaeaea;
+      }
+      50% {
+        top: 126px;
+        left: 50px;
+        width: 50px;
+        height: 7px;
+        background: #eee;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+
+  <!-- Optional JavaScript -->
+
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+</body>
+
+</html>
